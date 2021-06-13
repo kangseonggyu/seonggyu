@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+<style type="text/css">
+	*{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+	.course{
+		border: 1px solid black;
+	}
+	.main-container h2{
+		font-size: 32px;
+		color: #37474F;
+		font-weight: bold;
+		text-align: center;
+		padding-top: 60px;
+		padding-bottom: 40px;
+		border-bottom: 4px solid #bdbdbd;
+	}
+	.product-container{
+		width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.product-item{
+		float: left;
+		width: 240px;
+		margin-bottom: 80px;
+		text-decoration: none;
+		text-align: center;
+		border-radius: 15px;
+		margin-top: 20px;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	}
+	.product-item img{
+		width: 240px;
+		height: 240px;
+	}
+	.product-item:hover{
+		transform: scale(1.15);
+	}
+	.product-item:not(:nth-child(3n)){
+		margin-right: 40px;
+	}
+	.product-item p{
+		font-size: 16px;
+	}
+	.product-item .product-name{
+		margin-top: 20px;
+		margin-bottom: 4px;
+	}
+	.product-name{
+		color: #424242;
+	}
+	.product-price{
+		color: #424242;
+	}
+	.product-item .recommend{
+		font-size: 12px;
+		color: #9e9e9e;
+	}
+	.bannner {
+		position:relative;
+		display:inline-block;
+		height: 320px;
+		width: 100%;
+	}
+	.bannner img {
+		max-width:100%;
+	}
+	.bannner span.text {
+		position:absolute;top:50%;left:0;transform:translateY(-50%);display:none;width:100%;font-size:70px;color:#fff;font-weight:900;text-align:center;
+	}
+	.bannner::before, .bannner::after{
+		content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);transition:all .8s;-webkit-transition:all .8s;
+	}
+	.bannner::before {
+		width:95%;height:95%;border-top:2px solid #fff;border-bottom:2px solid #fff;width:0;
+	}
+	.bannner::after {
+		width:95%;height:95%;border-left:2px solid #fff;border-right:2px solid #fff;height:0;
+	}
+	.bannner:hover span.text {
+		display:block;
+	}
+	.bannner:hover::before {
+		width:100%;
+	}
+	.bannner:hover::after {
+		height:100%;
+	}
+	.clearfix{
+		clear:both;
+	}
+	.footer {
+   	text-align: center;
+     padding-top: 30px;
+     width: 100%;
+    } 
+  .footer li {
+    position: relative; display: inline; padding: 0 7px 0 10px; white-space: nowrap;
+    }
+  .footer li a{
+    text-decoration: none;
+    color: #424242;
+    }
+  .footer li:before {
+    content: ''; width: 1px; height: 12px; background-color: #dbdbdb; position: absolute; left: 0; top: 2px;
+    }
+  .footer li:first-child:before {
+    width: 0;
+    }
+  .footer address {
+    padding-top: 15px;
+    color: #9E9E9E;
+    }
+   .box{
+   	border-bottom: 2px solid #455A64;
+   	padding-bottom: 10px	;
+   }
+</style>
+</head>
+<body>
+	<div class="bg-color">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="LOGO">
+		<a href="Index.html">
+		<img src="image/logo img.png" height="40">
+		</a>
+		</div>
+  <!-- <a class="navbar-brand" href="#">The GYM</a> -->
+  <button class="navbar-toggler mar" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">신상품 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">맞춤 상품</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">마이 짐</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          나의 맞춤 상품
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="Final 1.html">보충제</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="Final 2.html">패션</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="Final 3.html">헬스 용품</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+	</nav>
+</div>
+	<div class="bannner">
+		<img src="image/10.jpg" width="100%" height="100%">
+		<span class="text">나의 맞춤 보충제 추천</span>
+	</div>
+
+	<div class="main-container">
+		<h2>추천 보충제</h2>
+		<div class="product-container">
+			<a class="product-item" href="#">
+				<img src="image/course1.jpg" alt="combat">
+				<p class="product-name">컴벳 하이드로 웨이 100%</p>
+				<p class="product-price">52,000</p>
+				<p class="recommend">부동의 판매 1위 최고의 판매량</p>
+			</a>
+			<a class="product-item" href="#">
+				<img src="image/course2.jpg" alt="combat">
+				<p class="product-name">신타6, 48서빙</p>
+				<p class="product-price">49,000</p>
+				<p class="recommend">국민 프로틴, 맛 보장</p>
+			</a>
+			<a class="product-item" href="#">
+				<img src="image/course3.jpg" alt="combat">
+				<p class="product-name">플래티넘 하이드로 웨이, 40서빙</p>
+				<p class="product-price">64,000</p>
+				<p class="recommend">속 편안한 명품 프로틴</p>
+			</a>
+		<div class="clearfix"></div>
+		</div>
+		
+	</div>
+	 <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer">
+                    <ul>
+                        <li><a href="#">사이트 도움말</a></li>
+                        <li><a href="#">사이트 이용약관</a></li>
+                        <li><a href="#">사이트 운영원칙</a></li>
+                        <li><a href="#"><strong>개인정보취급방침</strong></a></li>
+                        <li><a href="#">책임의 한계와 법적고지</a></li>
+                        <li><a href="#">게시중단요청서비스</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                    <address>
+                        Copyright ©
+                        <a href="http://webstoryboy.co.kr"><strong>Mosterzym</strong></a>
+                        All Rights Reserved.
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</body>
+</body>
+</html>
